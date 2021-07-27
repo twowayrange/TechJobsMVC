@@ -54,6 +54,8 @@ namespace TechJobsMVC.Controllers
                 jobs = JobData.FindByColumnAndValue(column, value);
                 ViewBag.title = "Jobs with " + ColumnChoices[column] + ": " + value;
             }
+            ViewBag.columns = ColumnChoices;
+
             ViewBag.jobs = jobs;
 
             return View();
